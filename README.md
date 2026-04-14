@@ -74,7 +74,7 @@ GND           →   Button pin 2   (internal pull-up used)
 
 ```
 Doraemon_OLED/
-└── Doraemon_OLED.ino   ← single-file Arduino sketch (~500 lines)
+└── Doraemon_OLED.ino   ← single-file Arduino sketch (~590 lines)
 ```
 
 ---

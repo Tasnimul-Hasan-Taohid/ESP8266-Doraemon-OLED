@@ -509,7 +509,7 @@ static void showSplash() {
 //  Button handler  (called every loop tick)
 // ─────────────────────────────────────────────────────────────────────────────
 static void handleButton() {
-  const bool   cur = (bool)digitalRead(BTN_PIN);   // LOW = pressed
+  const int    cur = digitalRead(BTN_PIN);     // LOW = pressed
   const uint32_t now = millis();
 
   // ── Falling edge – button pressed ───────────────────────────────────
@@ -574,7 +574,7 @@ void loop() {
     const uint32_t now = millis();
     if (now - g_danceAt >= DANCE_TICK) {
       g_danceAt   = now;
-      g_danceStep = (g_danceStep + 1) & (DANCE_FRAMES - 1);
+      g_danceStep = (g_danceStep + 1) % DANCE_FRAMES;
       showDance();
     }
   }
